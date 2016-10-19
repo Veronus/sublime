@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>This is my html test</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		document.write("<h1>This is my first heading</h1>")
+		
+		function myFunction() {
+			// body...
+			x = document.getElementById("demo");
+			x.innerHTML="Hello Wen!";
+		}
+
+		function changeImage(){
+			element = document.getElementById('myimage');
+			if (element.src.match("buaa")) {
+				element.src = "/image/cep.png";
+			}else{
+				element.src="/image/buaa.png";
+			}
+		}
+
+		function CheckNumber() {
+			var x=document.getElementById("demo2").value;
+			if (x=="" || isNaN(x)) {
+				alert("is not Numeric");
+			}else{
+				alert("Welcome my load!")
+			}
+		}
+	</script>
+	<h1>My first JavaScript</h1>
+
+	<p>
+		JavaScript 能够对事件作出反应。比如对按钮的点击：
+	</p>
+
+	<button type="button" onclick="alert('Welcome!')">点击这里</button>
+
+	<p id = "demo">JavaScrpt can change the content of html elements</p>
+
+	<button type="button" onclick="myFunction()">Click hear</button>
+	
+	<img id="myimage" onclick="changeImage()" src="/image/buaa.png">
+
+	<input id="demo2" type="text">
+	<button type="button" onclick="CheckNumber()">click hear to check the number</button>
+
+	</body>
+</html>
